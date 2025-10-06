@@ -97,6 +97,7 @@ public class Snacky {
         }
 
         Snackbar.SnackbarLayout snackbarLayout = (Snackbar.SnackbarLayout) snackbar.getView();
+        snackbarLayout.setFitsSystemWindows(true);
 
         if (builder.backgroundColor == null) builder.backgroundColor = builder.type.getColor();
         if (builder.backgroundColor != null) snackbarLayout.setBackgroundColor(builder.backgroundColor);
@@ -211,7 +212,6 @@ public class Snacky {
 
         public Builder setView(View view) {
             this.view = view;
-            this.view.setFitsSystemWindows(true);
             return this;
         }
 
