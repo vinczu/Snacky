@@ -81,6 +81,7 @@ public class Snacky {
     private Snackbar make() {
 
         Snackbar snackbar = Snackbar.make(builder.view, builder.text, builder.duration);
+        snackbar.getView().setFitsSystemWindows(true);
 
         if (builder.actionClickListener != null || builder.actionText != null) {
             if (builder.actionClickListener == null) builder.actionClickListener = new View.OnClickListener() {
@@ -97,7 +98,6 @@ public class Snacky {
         }
 
         Snackbar.SnackbarLayout snackbarLayout = (Snackbar.SnackbarLayout) snackbar.getView();
-        snackbarLayout.setFitsSystemWindows(true);
 
         if (builder.backgroundColor == null) builder.backgroundColor = builder.type.getColor();
         if (builder.backgroundColor != null) snackbarLayout.setBackgroundColor(builder.backgroundColor);
