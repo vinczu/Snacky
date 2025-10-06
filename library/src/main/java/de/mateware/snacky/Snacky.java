@@ -212,6 +212,7 @@ public class Snacky {
 
         public Builder setView(View view) {
             this.view = view;
+            this.view.setFitsSystemWindows(true);
             return this;
         }
 
