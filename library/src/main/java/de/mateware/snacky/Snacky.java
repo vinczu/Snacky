@@ -81,7 +81,6 @@ public class Snacky {
     private Snackbar make() {
 
         Snackbar snackbar = Snackbar.make(builder.view, builder.text, builder.duration);
-        snackbar.getView().setFitsSystemWindows(true);
 
         if (builder.actionClickListener != null || builder.actionText != null) {
             if (builder.actionClickListener == null) builder.actionClickListener = new View.OnClickListener() {
